@@ -1,0 +1,260 @@
+<!--
+  ╔══════════════════════════════════════════════════════╗
+  ║     AquaticJungle Chat Widget — Embed Code           ║
+  ║     Paste this into your website's HTML block        ║
+  ║                                                      ║
+  ║  STEP: Replace BACKEND_URL below with your           ║
+  ║  Render service URL, e.g.:                           ║
+  ║  https://aquaticjungle-chat-backend.onrender.com     ║
+  ╚══════════════════════════════════════════════════════╝
+-->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500&display=swap');
+
+  #aj-widget * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'DM Sans', sans-serif; }
+
+  #aj-fab {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 58px; height: 58px; border-radius: 50%;
+    background: linear-gradient(135deg, #0f5c32, #1a8a4a);
+    border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(10,60,30,0.38);
+    z-index: 9999; transition: transform 0.2s, box-shadow 0.2s;
+  }
+  #aj-fab:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(10,60,30,0.48); }
+  #aj-fab svg { width: 26px; height: 26px; fill: #fff; }
+  #aj-fab-badge {
+    position: absolute; top: -3px; right: -3px;
+    width: 18px; height: 18px; border-radius: 50%;
+    background: #5DCAA5; border: 2px solid #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px; color: #fff; font-weight: 500;
+  }
+
+  #aj-preview {
+    position: fixed; bottom: 90px; right: 88px;
+    background: #fff; border: 0.5px solid #c8e4d4;
+    border-radius: 13px; border-bottom-right-radius: 2px;
+    padding: 10px 14px; font-size: 13px; color: #1a3528;
+    max-width: 210px; line-height: 1.55;
+    box-shadow: 0 4px 18px rgba(10,60,30,0.1);
+    z-index: 9998; animation: aj-pop 0.3s ease 1.5s both;
+  }
+  #aj-preview::after {
+    content: ''; position: absolute; bottom: -7px; right: 8px;
+    border: 7px solid transparent; border-top-color: #c8e4d4;
+  }
+
+  #aj-panel {
+    position: fixed; bottom: 90px; right: 24px;
+    width: 360px; height: 530px;
+    border-radius: 18px; overflow: hidden;
+    display: flex; flex-direction: column;
+    box-shadow: 0 8px 44px rgba(10,60,30,0.2);
+    z-index: 9997;
+    transform: scale(0.9) translateY(20px); opacity: 0; pointer-events: none;
+    transition: all 0.28s cubic-bezier(0.34,1.56,0.64,1);
+  }
+  #aj-panel.open { transform: scale(1) translateY(0); opacity: 1; pointer-events: all; }
+
+  #aj-header {
+    background: linear-gradient(135deg, #0f5c32 0%, #1a8a4a 100%);
+    padding: 14px 16px; display: flex; align-items: center; gap: 10px; flex-shrink: 0;
+  }
+  .aj-logo { width: 38px; height: 38px; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 20px; }
+  .aj-htitle { font-family: 'DM Serif Display', serif; font-size: 15px; color: #fff; }
+  .aj-hsub { font-size: 11px; color: rgba(255,255,255,0.7); margin-top: 1px; }
+  .aj-dot { width: 8px; height: 8px; border-radius: 50%; background: #5DCAA5; border: 2px solid rgba(255,255,255,0.4); }
+  #aj-close { margin-left: auto; background: none; border: none; cursor: pointer; color: rgba(255,255,255,0.7); font-size: 22px; padding: 0 4px; line-height: 1; }
+  #aj-close:hover { color: #fff; }
+
+  #aj-messages {
+    flex: 1; overflow-y: auto; padding: 14px;
+    display: flex; flex-direction: column; gap: 10px;
+    background: #f7faf8; scrollbar-width: thin;
+  }
+  #aj-messages::-webkit-scrollbar { width: 3px; }
+  #aj-messages::-webkit-scrollbar-thumb { background: #b4d4c0; border-radius: 4px; }
+
+  .aj-msg { max-width: 86%; font-size: 13.5px; animation: aj-pop 0.2s ease; }
+  .aj-msg.bot { align-self: flex-start; }
+  .aj-msg.user { align-self: flex-end; }
+  .aj-label { font-size: 10px; color: #8aab96; margin-bottom: 3px; padding: 0 2px; }
+  .aj-msg.user .aj-label { text-align: right; }
+  .aj-bubble { padding: 10px 13px; border-radius: 16px; line-height: 1.65; }
+  .aj-msg.bot .aj-bubble { background: #fff; border: 0.5px solid #c8e4d4; border-bottom-left-radius: 4px; color: #1a3528; }
+  .aj-msg.user .aj-bubble { background: #0f5c32; border-bottom-right-radius: 4px; color: #e8f5ee; }
+
+  .aj-typing { display: inline-flex; gap: 4px; align-items: center; padding: 4px 2px; }
+  .aj-typing span { width: 6px; height: 6px; border-radius: 50%; background: #5DCAA5; animation: aj-dp 1.2s infinite; }
+  .aj-typing span:nth-child(2) { animation-delay: .2s; }
+  .aj-typing span:nth-child(3) { animation-delay: .4s; }
+
+  #aj-footer { background: #fff; border-top: 0.5px solid #d0e8d8; padding: 10px 12px; flex-shrink: 0; }
+  #aj-input-row { display: flex; gap: 8px; align-items: center; }
+  #aj-input {
+    flex: 1; border: 0.5px solid #c8e4d4; border-radius: 20px;
+    padding: 9px 14px; font-size: 13.5px; color: #1a3528;
+    background: #f7faf8; font-family: 'DM Sans', sans-serif; outline: none;
+  }
+  #aj-input:focus { border-color: #1a8a4a; background: #fff; }
+  #aj-send {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: #0f5c32; border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; transition: background 0.15s;
+  }
+  #aj-send:hover { background: #1a8a4a; }
+  #aj-send svg { width: 15px; height: 15px; fill: #fff; }
+
+  #aj-quickbtns { display: flex; gap: 7px; margin-top: 8px; flex-wrap: wrap; }
+  .aj-qbtn {
+    font-size: 11px; padding: 4px 10px; border-radius: 12px;
+    border: 0.5px solid #b4d4c0; background: #edf7f2;
+    color: #0f5c32; cursor: pointer; white-space: nowrap;
+    font-family: 'DM Sans', sans-serif; transition: background 0.15s;
+  }
+  .aj-qbtn:hover { background: #d0ede0; }
+  #aj-powered { text-align: center; font-size: 10px; color: #aab8b2; margin-top: 7px; }
+
+  @keyframes aj-pop { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes aj-dp { 0%,80%,100%{opacity:.3;transform:scale(.85)} 40%{opacity:1;transform:scale(1)} }
+
+  @media (max-width: 420px) {
+    #aj-panel { width: calc(100vw - 20px); right: 10px; }
+  }
+</style>
+
+<div id="aj-widget">
+  <div id="aj-preview">🌿 Got questions about EI Pack? Ask me!</div>
+
+  <div id="aj-panel">
+    <div id="aj-header">
+      <div class="aj-logo">🌿</div>
+      <div style="flex:1;">
+        <div class="aj-htitle">AquaticJungle Assistant</div>
+        <div class="aj-hsub">EI Pack · Fertilizers · Planted Tanks</div>
+      </div>
+      <div class="aj-dot"></div>
+      <button id="aj-close" onclick="ajToggle()" aria-label="Close">×</button>
+    </div>
+
+    <div id="aj-messages">
+      <div class="aj-msg bot">
+        <div class="aj-label">AquaticJungle</div>
+        <div class="aj-bubble">Hi! 👋 I'm the AquaticJungle assistant. Ask me anything about the <strong>EI Pack</strong>, how to dose your tank, what plants it works for, or how to order!</div>
+      </div>
+    </div>
+
+    <div id="aj-footer">
+      <div id="aj-input-row">
+        <input id="aj-input" type="text" placeholder="Ask about EI Pack, dosing, plants…" />
+        <button id="aj-send" aria-label="Send">
+          <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+        </button>
+      </div>
+      <div id="aj-quickbtns">
+        <span class="aj-qbtn" onclick="ajQuick('What exactly is the EI Pack and what do I get?')">What is EI Pack?</span>
+        <span class="aj-qbtn" onclick="ajQuick('How do I dose fertilizer for my tank?')">How to dose?</span>
+        <span class="aj-qbtn" onclick="ajQuick('How can I place an order?')">How to order</span>
+        <span class="aj-qbtn" onclick="ajQuick('Is it safe for shrimps?')">Shrimp safe?</span>
+      </div>
+      <div id="aj-powered">Powered by Claude AI · aquaticjungle.in</div>
+    </div>
+  </div>
+
+  <button id="aj-fab" onclick="ajToggle()" aria-label="Chat with us">
+    <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+    <div id="aj-fab-badge">1</div>
+  </button>
+</div>
+
+<script>
+(function() {
+  // ✅ Replace this with your actual Render backend URL after deployment
+  var BACKEND_URL = 'https://aquaticjungle-chat-backend.onrender.com';
+
+  var history = [];
+  var loading = false;
+  var isOpen = false;
+
+  window.ajToggle = function() {
+    isOpen = !isOpen;
+    document.getElementById('aj-panel').classList.toggle('open', isOpen);
+    var prev = document.getElementById('aj-preview');
+    if (prev) prev.style.display = isOpen ? 'none' : '';
+    document.getElementById('aj-fab-badge').style.display = isOpen ? 'none' : '';
+  };
+
+  window.ajQuick = function(q) {
+    document.getElementById('aj-input').value = q;
+    ajSend();
+  };
+
+  function ajSend() {
+    var inp = document.getElementById('aj-input');
+    var text = inp.value.trim();
+    if (!text || loading) return;
+    loading = true;
+    inp.value = '';
+
+    addMsg('user', text);
+    history.push({ role: 'user', content: text });
+    var typingEl = addMsg('bot', null, true);
+
+    fetch(BACKEND_URL + '/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: history })
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      var reply = data.reply || "Sorry, something went wrong. Please contact us on WhatsApp: +91 8928068206";
+      var bub = typingEl.querySelector('.aj-bubble');
+      bub.innerHTML = reply
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\n/g, '<br>');
+      history.push({ role: 'assistant', content: reply });
+      loading = false;
+      scrollDown();
+    })
+    .catch(function() {
+      typingEl.querySelector('.aj-bubble').textContent = 'Connection error. Reach us on WhatsApp +91 8928068206.';
+      loading = false;
+    });
+  }
+
+  function addMsg(role, text, isTyping) {
+    var msgs = document.getElementById('aj-messages');
+    var wrap = document.createElement('div');
+    wrap.className = 'aj-msg ' + role;
+    var label = document.createElement('div');
+    label.className = 'aj-label';
+    label.textContent = role === 'user' ? 'You' : 'AquaticJungle';
+    var bub = document.createElement('div');
+    bub.className = 'aj-bubble';
+    if (isTyping) {
+      bub.innerHTML = '<div class="aj-typing"><span></span><span></span><span></span></div>';
+    } else {
+      bub.textContent = text;
+    }
+    wrap.appendChild(label);
+    wrap.appendChild(bub);
+    msgs.appendChild(wrap);
+    scrollDown();
+    return wrap;
+  }
+
+  function scrollDown() {
+    var m = document.getElementById('aj-messages');
+    m.scrollTop = m.scrollHeight;
+  }
+
+  document.getElementById('aj-input').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') ajSend();
+  });
+  document.getElementById('aj-send').addEventListener('click', ajSend);
+})();
+</script>
