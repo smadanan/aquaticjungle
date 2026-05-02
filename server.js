@@ -44,6 +44,361 @@ Why EI Pack beats commercial liquid fertilizers:
 • The same premium CSM+B micro blend from the EI Pack
 • Excellent standalone choice for upgrading from inferior micro sources
 
+The complete fertilizer package to get started with the Estimative Index method of planted tank fertilization.Before you get started, please read about EI method popularised by Tom Barr, EI method.
+
+Our Estimative Index E.I. fertilizer package includes the following micros & macros.
+
+Aquagold CSM + B - 40GM
+Potassium Nitrate (KNO3) - 80GM
+Mono Potassium Phosphate (KH2PO4) - 20GM
+Magnesium Sulfate (MgSO4) - 120GM
+Fe DTPA(optional) - 20GM
+
+AquaGold EI pack recipe, usage and dosage.
+
+Makes 2 litre macro and 2 litre micro each.
+
+What’s in the pack? How do I make the solution?
+
+There are 4 packets in this kit, 5 pack if you also selected the Fe DTPA along with the EI kit.
+
+3 white powder and 1 green. All three white powder will go together into bottle1 with 2 litre of water
+
+Green powder (Micro) will go into second bottle - bottle2 with 2 litre of water.
+
+The Fe dtpa can be added to a third bottle with 2 liter water.
+
+The water used should be ideally RO/ distillled water. If RO water is not available, you can use tap water after boiling and letting it cool before mixing.
+
+Can I make stock solution of 1 litre macro and micro instead of 2 liters?
+
+If two litre bottles are not available you can also make 1 litre stock solution with the same amount of fertilizer. Only that the dosage ml will be half (5ml per 50litre of aquarium water) since the solution is double concentrated.
+
+If RO / distilled water is not feasible, boil tap water and let it cool then you can mix
+
+What is the Dosage ->> EI is Estimative index. So the name suggest it’s based on estimation. Nothing is a hard rule. Everything below is just a guideline. With 2 litre stock solution dosage quantity is 10ml per 50 litre of Aquarium water, for both macro and micro if the Tank is densely planted, else you can reduce the dosage....you can use your judgement. Daily dosing is required alternating between micro and macro
+
+Dosage Schedule:
+
+Day1 macro, Day 2 micro, Day3 macro and likewise.....dose after lights off at night.
+
+Fe (if brought) should be dosed daily morning after lights on.
+
+Saturday 35/40% Water change
+
+
+
+
+
+This Dosage results in the following PPM of NPK to be added to the aquarium
+
+Potassium (K): ~3.67 ppm
+Phosphate (P): ~0.46 ppm
+Nitrate (N): ~1.11 ppm
+Here’s the detailed step-by-step breakdown of the calculation for the final PPM values of Potassium (K), Phosphate (P), and Nitrate (N) when dosing 20 grams of KH2PO4, 80 grams of KNO3, and 120 grams of MgSO4 into 2 liters of water and then dosing 10 ml of that solution into a 50-liter tank.
+
+Step 1: Molecular Weights
+We first need the molecular weights of the compounds:
+
+KH2PO4 (Monopotassium Phosphate):
+Potassium (K) = 39.1 g/mol
+Hydrogen (H) = 1.008 g/mol
+Phosphorus (P) = 30.97 g/mol
+Oxygen (O) = 16 g/mol
+Total molecular weight of KH2PO4 = 39.1 + (2 × 1.008) + 30.97 + (4 × 16) = 136.086 g/mol
+KNO3 (Potassium Nitrate):
+Potassium (K) = 39.1 g/mol
+Nitrogen (N) = 14 g/mol
+Oxygen (O) = 16 g/mol × 3 = 48 g/mol
+Total molecular weight of KNO3 = 39.1 + 14 + 48 = 101.1 g/mol
+MgSO4 (Magnesium Sulfate):
+Magnesium (Mg) = 24.305 g/mol
+Sulfur (S) = 32.065 g/mol
+Oxygen (O) = 16 g/mol × 4 = 64 g/mol
+Total molecular weight of MgSO4 = 24.305 + 32.065 + 64 = 120.37 g/mol
+Step 2: Moles of Each Compound
+We calculate how many moles of each compound are present based on the given weight.
+
+KH2PO4: 
+Moles of KH2PO4
+=
+20
+g
+136.086
+g/mol
+≈
+0.147
+moles
+Moles of KH2PO4=136.086 g/mol20 g≈0.147 moles
+KNO3: 
+Moles of KNO3
+=
+80
+g
+101.1
+g/mol
+≈
+0.791
+moles
+Moles of KNO3=101.1 g/mol80 g≈0.791 moles
+MgSO4:
+(not used in NPK, so we omit it for this calculation)
+Step 3: Calculating Amount of Potassium (K), Phosphorus (P), and Nitrogen (N)
+Now we calculate the amount of each nutrient provided by the moles of KH2PO4 and KNO3.
+
+Potassium (K):
+Potassium (K) comes from both KH2PO4 and KNO3.
+From KH2PO4: 
+Potassium from KH2PO4
+=
+0.147
+moles
+×
+39.1
+g/mol
+×
+1000
+=
+5747.7
+mg
+Potassium from KH2PO4=0.147 moles×39.1 g/mol×1000=5747.7 mg
+From KNO3: 
+Potassium from KNO3
+=
+0.791
+moles
+×
+39.1
+g/mol
+×
+1000
+=
+30936.1
+mg
+Potassium from KNO3=0.791 moles×39.1 g/mol×1000=30936.1 mg
+Total Potassium: 
+5747.7
++
+30936.1
+=
+36683.8
+mg
+5747.7+30936.1=36683.8 mg
+Phosphorus (P):
+Phosphorus (P) comes from KH2PO4.
+From KH2PO4: 
+Phosphorus from KH2PO4
+=
+0.147
+moles
+×
+30.97
+g/mol
+×
+1000
+=
+4551.53
+mg
+Phosphorus from KH2PO4=0.147 moles×30.97 g/mol×1000=4551.53 mg
+Nitrogen (N):
+Nitrogen (N) comes from KNO3.
+From KNO3: 
+Nitrogen from KNO3
+=
+0.791
+moles
+×
+14
+g/mol
+×
+1000
+=
+11078.14
+mg
+Nitrogen from KNO3=0.791 moles×14 g/mol×1000=11078.14 mg
+Step 4: Concentration of Nutrients in 2 Liters of Solution
+Now, we calculate the concentration of these nutrients in 2 liters (2000 ml) of water:
+
+Potassium (K): 
+Concentration of K
+=
+36683.8
+mg
+2000
+ml
+=
+18.34
+mg/ml
+Concentration of K=2000 ml36683.8 mg=18.34 mg/ml
+Phosphorus (P): 
+Concentration of P
+=
+4551.53
+mg
+2000
+ml
+=
+2.28
+mg/ml
+Concentration of P=2000 ml4551.53 mg=2.28 mg/ml
+Nitrogen (N): 
+Concentration of N
+=
+11078.14
+mg
+2000
+ml
+=
+5.54
+mg/ml
+Concentration of N=2000 ml11078.14 mg=5.54 mg/ml
+Step 5: Dosing 10 ml of Solution into 50 Liters of Water
+When you dose 10 ml of this solution into 50 liters of water, you get the following amounts:
+
+Potassium (K): 
+K dosed
+=
+10
+ml
+×
+18.34
+mg/ml
+=
+183.4
+mg
+K dosed=10 ml×18.34 mg/ml=183.4 mg
+Phosphorus (P): 
+P dosed
+=
+10
+ml
+×
+2.28
+mg/ml
+=
+22.8
+mg
+P dosed=10 ml×2.28 mg/ml=22.8 mg
+Nitrogen (N): 
+N dosed
+=
+10
+ml
+×
+5.54
+mg/ml
+=
+55.4
+mg
+N dosed=10 ml×5.54 mg/ml=55.4 mg
+Step 6: Final PPM in 50 Liters of Water
+To find the final PPM in the 50-liter aquarium:
+
+Potassium (K): 
+Final PPM of K
+=
+183.4
+mg
+50
+liters
+=
+3.67
+ppm
+Final PPM of K=50 liters183.4 mg=3.67 ppm
+Phosphorus (P): 
+Final PPM of P
+=
+22.8
+mg
+50
+liters
+=
+0.46
+ppm
+Final PPM of P=50 liters22.8 mg=0.46 ppm
+Nitrogen (N): 
+Final PPM of N
+=
+55.4
+mg
+50
+liters
+=
+1.11
+ppm
+Final PPM of N=50 liters55.4 mg=1.11 ppm
+Final PPM Values:
+Potassium (K): ~3.67 ppm
+Phosphorus (P): ~0.46 ppm
+Nitrogen (N): ~1.11 ppm
+This detailed breakdown shows how we reached the final PPM values for each nutrient in the 50-liter tank.
+
+
+
+
+
+Product video YouTube : https://goo.gl/gk9enH
+
+Storage: Store the bottles in a cool dark place. Away from direct sunlight(below the tank if you have a cabinet), alternatively store in a black coloured bottle. Else it may catch algae.
+
+Apart from this macro and micro you do not need to dose any other kind of fertiliser for your plants. While CO2 is not compulsory, it greatly improves plant health. For best results....It is always recommended to include a pressurised CO2 kit for your planted tank.
+
+_____________________________
+FE DTPA 10%
+_____________________________
+
+Product Details
+***New Improvement packaging of 3*20gm packs***
+
+Iron Chelate Fe DTPA 10% - 60gm (Dry aquarium fertilizer) - Premium Grade
+
+
+**Move to air tight container if the pack is opened and partially used **
+
+
+Iron (Fe) is one of the most important nutrient that must be supplemented in planted Aquariums. Its an important nutrients to keep the Green plants GREEN and Red plants RED! Iron deficiency will lead to chlorosis and retarted plant growth!
+
+
+
+
+Preparing Stock Solution and Dosage for Fe DTPA 10%
+
+The Target ppm for Fe in a fairly dense planted tank is between 0.1 to 0.2 ppm. Let keep our target as 0.2ppm. To reach a target of 0.2ppm Fe you will need to add 20grams of DTPA Fe (10%) to your 2 Liter stock solution. Add 10mL of that mix to every 50 liter of aquarium water. 
+
+With the new improved packaging you get 3 packs of 20gm each. Each 2liter stock solution only needs 20gm. Which means you don't have to open the other packs and it remains fresh for years.
+
+Dose these levels 2-4 times a week for EI. Classic EI depends on good CO2, good circulation, and regular water changes. Fe should always be dosed during the photo-period. It will get absorbed very soon, so after a hour or two from dosing, the ppm level would be almost negligible.
+
+Iron chelate Fe-DTPA is best suited Iron form for aquatic plants.
+
+
+Technical information below :
+Why is iron important in your Aquarium?
+
+In mass, iron is one of the most plentiful elements on the planet and one of the oldest metals known to and used by humanity. In Plants, iron serves many functions but is an essential component in the production of chlorophyll, the site of photosynthesis. Without enough iron, plants cannot produce enough chlorophyll, leading to retarded plant growth characterized by inter-veinal chlorosis. Iron also plays a major role in many other proteins and reactions
+
+
+How Oxygen complicates Iron uptake.
+
+Iron is a little tricky to manage because it is very reactive. It exists in a variety of ionic states, primarily as Iron2+(II; Ferrous Iron) or Iron3+(III; Ferric Iron) and transitions readily between them depending on environmental variables like oxygen. Unfortunately, because it is highly reactive, iron is typically unavailable. It toggles between soluble and insoluble forms, forms compounds with other minerals and (generally in aerobic environments) plays hard to get. The problem? Ferrous iron is available to plants (it’s soluble). Ferric iron is not (it’s insoluble). Ferric iron is the more oxidized form, whereas ferrous iron is less oxidized.
+
+Ferrous_Ferric
+
+Things grow more complicated because as soon as ferrous iron becomes soluble in aerobic environments, it is often oxidized (becoming ferric iron) OR it reacts with other compounds to become biologically unavailable (especially at high pH values when different hydroxides are formed).
+
+Because aquariums are generally aerobic (and certainly aerobic in the root zone), iron deficiencies can often arise—even when there is technically plenty of iron within the system.
+
+Now, this relationship between oxygen and iron isn’t a full-time thing. In reality, iron is flitting between ferrous and ferric states, but the dominant state in high-pH and oxidized environments are ferric; this means that your plants cannot take it up. These details are important because they dictate how we examine the solutions.
+When_ThenSupplementing Iron --> Wrong approaches.
+
+Many practitioners throw rusty iron items into their systems falsely assuming that this will supplement system iron.
+
+In a sense it does add to the reservoir of system iron, but not in a constructive or meaningful way. All this does is introduce more ferric iron to the system—a form of iron that was most likely already in plentiful supply. In low-pH systems, ferrous iron has a much better chance of reaching the root zone, simply because there are fewer hydroxyl (OH–) groups to react with along the way. However, even in the absence of hydroxyl groups, there are many other chemical obstacles to reaching the plant root zone in adequate quantities.
+
+Iron Deficiency leads to inter veinal chlorosis
+
+Chlorosisleaf
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 THE EI METHOD (Estimative Index)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -68,8 +423,8 @@ By tank size:
 • 4 feet / ~300+ liters: Use 3x or make larger 2L stock solutions
 
 Mixing stock solutions (recommended method):
-• Macro: Dissolve all macro chemicals in 2L of water → dose 10-15ml per dose per 100L
-• Micro: Dissolve CSM+B in 2L of water → dose 10-15ml per dose per 100L
+• Macro: Dissolve all macro chemicals in 2L of water → dose 10ml per dose per 50L
+• Micro: Dissolve CSM+B in 2L of water → dose 10ml per dose per 50L
 • Store in labeled bottles (micro turns slightly brown — totally normal)
 • Shake before each use
 
